@@ -11,12 +11,14 @@ go get github.com/theojulienne/go-activecompat
 
 ## `messages` package
 
-Classes provided:
- * `KeyGenerator` - [rails docs](https://edgeapi.rubyonrails.org/classes/ActiveSupport/KeyGenerator.html)
- * `MessageEncryptor` - [rails docs](https://api.rubyonrails.org/v5.2.3/classes/ActiveSupport/MessageEncryptor.html)
- * `MessageVerifier` - [rails docs](https://api.rubyonrails.org/v5.2.3/classes/ActiveSupport/MessageVerifier.html)
+[![GoDoc](https://godoc.org/github.com/theojulienne/go-activecompat/pkg/messages?status.svg)](https://godoc.org/github.com/theojulienne/go-activecompat/pkg/messages)
 
-Additionally, metadata is fully supported and both string purposes and message expirations can be provided and validated.
+Classes provided:
+ * `KeyGenerator` - [Go docs](https://godoc.org/github.com/theojulienne/go-activecompat/pkg/messages#KeyGenerator), [Ruby/Rails docs](https://edgeapi.rubyonrails.org/classes/ActiveSupport/KeyGenerator.html)
+ * `MessageEncryptor` - [Go docs](https://godoc.org/github.com/theojulienne/go-activecompat/pkg/messages#MessageEncryptor), [Ruby/Rails docs](https://api.rubyonrails.org/v5.2.3/classes/ActiveSupport/MessageEncryptor.html)
+ * `MessageVerifier` - [Go docs](https://godoc.org/github.com/theojulienne/go-activecompat/pkg/messages#MessageVerifier), [Ruby/Rails docs](https://api.rubyonrails.org/v5.2.3/classes/ActiveSupport/MessageVerifier.html)
+
+The Rails documentation is more complete, and generally the Go version should be used in the same way. Additionally, metadata is fully supported and both string purposes and message expirations can be provided and validated.
 
 Differences from Rails:
  * Serialization and deserialisation is not supported, all classes return messages as `[]byte`. Calling classes should handle marshaling, and generally should use JSON for improved compatibility.
